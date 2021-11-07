@@ -4,14 +4,111 @@
     <p>Ejercicio Curso FrontEnd</p>
 </body>
 <script>
-    /*Primer Ejercicio Ordernar un arreglo de numero de menor a 
-    a mayor*/
+/*Primer Ejercicio: Script para ordenar de menor a mayor un arreglo de numeros*/
+let numeros = [7,2,1,0,9,3];
+let inu = 0;
+let xn = numeros.length;
+while ( inu < xn)
+{
+	for ( let jnu = inu + 1; jnu < xn ; jnu++)
+	{
+		if (numeros[inu] > numeros[jnu])
+			{
+				let menor = numeros[jnu];
+				numeros[jnu] = numeros[inu];
+				numeros[inu] = menor;
+			}else {continue;}
+	}
+inu++;
+}
+console.log(numeros);
+</script>
+    
 
-    /*Segundo Ejercicio De un arreglo de datos , solo seleccionar los 
-    que son numero, y ordenarlos de menor a mayor */
+<script>
+/*Segundo Ejercicio: Script para filtrar numeros en un arrelgo y ordenarlos de menor a mayor*/
+let ar1 = [10,"&&",-9,"2,1",0,"Hola","9",81,3,01,6,8,7];
+let sar1 = ar1.length;
+let ap1 = 0 ;
+let ap2 = 0;
+let ar2 = [];
+while ( ap1 < sar1 )
+{
+     if (typeof ar1[ap1] == 'number')
+       {
+        console.log(ar1[ap1]);
+        ar2[ap2] = ar1[ap1];
+		ap2++;
+        
+       }
+ap1++;
+}
+let i = 0;
+let x = ar2.length;
+while ( i < x)
+{
+	for ( let j = i + 1; j < x ; j++)
+	{
+		if (ar2[i] > ar2[j])
+			{
+				let m_n = ar2[j];
+				ar2[j] = ar2[i];
+				ar2[i] = m_n;
+			}else {continue;}
+	}
+i++;
+}
+console.log(ar2);
 
 
-      /*Tercer Ejercicio serie fibonasi  que son numero, y ordenarlos de menor a mayor */
+</script>
+<script>
+      /*Tercer Ejercicio: Procesar la serie fibonacci*/
+
+let numerossf = 30;
+let v1 = 0;
+let v2 = 1;
+let fibo = [];
+console.log(typeof numerossf);
+if (typeof numerossf == 'number' && numerossf >=0)
+{
+switch (numerossf)
+{
+ case 0:
+     fibo = [0];
+     controlimp = true;
+	 break;
+ case 1:
+     fibo = [0,1];
+	 controlimp = true;
+	 break;
+ default:
+     for (let fib = 2;fib<numerossf;fib++)
+        {
+		 fibo[0] = v1;
+		 fibo[1] = v2;
+         fibo[fib] = (fibo[fib-1] + fibo[fib-2]);
+		 //console.log(fibo);
+		}
+  
+}
+       //console.log("Serie Fibonacci es"    );
+}
+else 
+{
+      console.log("Ingrese un valor númerico entero mayor o igual a 0");
+	  controlimp = false;
+}   
+switch (controlimp)
+{
+ case false:
+     console.log(" No hay serie Fibonacci para un dato no numerico o menor a cero");
+	 break;
+ case true:
+     console.log("Serie Fibonacci es " + "{ " + fibo + " }");
+ default:
+     console.log("Serie Fibonacci procesada")	
+}
 </script>
 </head>
 
