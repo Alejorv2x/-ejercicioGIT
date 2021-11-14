@@ -1,0 +1,20 @@
+<script>
+/*Primer Ejercicio: Script para ordenar de menor a mayor un arreglo de numeros*/
+let numeros = [-5,-2,7,2,1,0,9,3];
+let inu = 0;
+let xn = numeros.length;
+while ( inu < xn)
+{
+	for ( let jnu = inu + 1; jnu < xn ; jnu++)
+	{
+		if (numeros[inu] > numeros[jnu])
+			{
+				let menor = numeros[jnu];
+				numeros[jnu] = numeros[inu];
+				numeros[inu] = menor;
+			}else {continue;}
+	}
+inu++;
+}
+console.log(numeros);
+</script>

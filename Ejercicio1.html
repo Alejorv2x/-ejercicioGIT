@@ -1,0 +1,57 @@
+<html> 
+<head>
+<body>
+    <p>Ejercicio Curso FrontEnd</p>
+</body>
+<script>
+      /*Tercer Ejercicio: Procesar la serie fibonacci*/
+
+let numeroDeElementos = 4;
+let v1 = 0;
+let v2 = 1;
+var imprime = 0;
+let fibo = [];
+console.log(typeof numeroDeElementos);
+if (typeof numeroDeElementos == 'number' && numeroDeElementos >=0)
+{
+console.log(numeroDeElementos);
+switch (numeroDeElementos)
+	{
+	   		case 0:
+			fibo = [0];
+			imprime = 1;
+			break;
+		case 1:
+			fibo = [0,1];
+			imprime = 1;
+			break;
+		default:
+			for (let fib = 2;fib<numeroDeElementos;fib++)
+			{
+				fibo[0] = v1;
+				fibo[1] = v2;
+				fibo[fib] = (fibo[fib-1] + fibo[fib-2]);
+				console.log(imprime);
+			}
+            imprime = 1
+	}
+       //console.log("Serie Fibonacci es"    );
+}
+else 
+{
+      console.log("Ingrese un valor númerico entero mayor o igual a 0");
+	  imprime = 0;
+}   
+	switch (imprime)
+	{
+		case 0:
+			console.log(" No hay serie Fibonacci para un dato no numerico o menor a cero");
+			break;
+		case 1:
+			console.log("Serie Fibonacci es " + "{ " + fibo + " }");
+		default:
+			console.log("Serie Fibonacci procesada")	
+	}
+</script>
+</head>
+</html>
