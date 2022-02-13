@@ -16,7 +16,7 @@ var cursor = [];
 for(var i = 0; i < cadena.length; i++) {
 	if (cadena[i].toLowerCase() === rep) cursor.push(i);
 }
-  return cursor.length;
+  return console.log("El caracter " + '"' + rep + '"' + " se repite " + cursor.length + " veces " + " en la cadena " + '"' + str + '"');
 }
 
 
@@ -65,8 +65,8 @@ class Jugador extends Persona{
        console.log(this.apellido);
        console.log(this.edad);
        console.log(this.posicion);
-       console.log(This.experiencia);
-       console.log(This.idfederacion);
+       console.log(this.experiencia);
+       console.log(this.idfederacion);
     }
    }
     
@@ -104,7 +104,7 @@ console.log(Equipo1);
 
 Equipo1.addJuagadores(Ana, Maria, Monica, Sandra);
 
-Ana.getDatalle;
+Ana.getDatalle();
 Mario.getDatalle();
 Equipo1.getDetalles(Equipo1);
 
